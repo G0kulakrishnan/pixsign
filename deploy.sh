@@ -1,7 +1,7 @@
 #!/bin/bash
 # PixSign – VPS Deploy Script
-# Usage: bash deploy.sh
-# Run this ON the VPS server: ssh root@85.208.51.93 then bash deploy.sh
+# Usage (from local machine): bash deploy.sh
+# Or SSH in as deploy user: ssh pixsign-deploy@85.208.51.93 then bash deploy.sh
 
 set -e
 
@@ -13,38 +13,36 @@ echo "=========================================="
 echo " PixSign Deploy"
 echo "=========================================="
 
-# 1. Install Node if missing
+# 1. Check Node
 if ! command -v node &> /dev/null; then
-  echo "[1/6] Installing Node.js..."
-  curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-  apt-get install -y nodejs
+  echo "[1/5] Node not found — install it as root first: apt install nodejs"
+  exit 1
 else
-  echo "[1/6] Node $(node -v) already installed"
+  echo "[1/5] Node $(node -v) ✓"
 fi
 
-# 2. Clone or pull latest code into temp build dir
-echo "[2/6] Fetching latest code from GitHub..."
+# 2. Clone latest code
+echo "[2/5] Fetching latest code from GitHub..."
 rm -rf "$BUILD_DIR"
 git clone "$REPO" "$BUILD_DIR"
 
-# 3. Install dependencies & build
-echo "[3/6] Installing dependencies..."
+# 3. Install & build
+echo "[3/5] Installing dependencies..."
 cd "$BUILD_DIR"
-npm install
+npm install --silent
 
-echo "[4/6] Building production bundle..."
+echo "[4/5] Building production bundle..."
 npm run build
 
-# 4. Deploy dist/ to web root
-echo "[5/6] Deploying to $APP_DIR ..."
+# 4. Deploy to web root
+echo "[5/5] Deploying to $APP_DIR ..."
 mkdir -p "$APP_DIR"
-rsync -a --delete "$BUILD_DIR/dist/" "$APP_DIR/"
-
-# 5. Cleanup
-echo "[6/6] Cleaning up..."
+cp -r "$BUILD_DIR/dist/." "$APP_DIR/"
 rm -rf "$BUILD_DIR"
 
+# 5. Reload nginx
+sudo systemctl reload nginx
+
 echo ""
-echo "✅ Deploy complete! Files live at $APP_DIR"
-echo "   Make sure Nginx is configured (see below if first deploy)"
+echo "✅ Deploy complete → https://www.pixsign.in"
 echo ""

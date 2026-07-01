@@ -109,18 +109,32 @@ src/
 **Web root:** `/var/www/` (static sites served here)  
 **Process manager:** PM2 (already running other projects)
 
-### Deployment flow for pixsign (static React build)
+### Deploy user (non-root)
+- **User:** `pixsign-deploy`
+- **SSH:** `ssh pixsign-deploy@85.208.51.93`
+- **Web root:** `/var/www/pixsign/` (owned by pixsign-deploy)
+- **Sudoers:** can run `npm`, `git`, `systemctl reload nginx`, `rsync` without password
+
+### How Claude should deploy (use this exact sequence)
 
 ```bash
-# 1. Build locally
-npm run build
+# 1. Commit & push all changes to GitHub first
+git add -A
+git commit -m "description of changes"
+git push
 
-# 2. Upload dist/ to VPS
-scp -r dist/ root@85.208.51.93:/var/www/pixsign/
-
-# Or rsync (preferred — only syncs changes)
-rsync -avz --delete dist/ root@85.208.51.93:/var/www/pixsign/
+# 2. SSH into VPS as deploy user and run deploy script
+ssh pixsign-deploy@85.208.51.93 "curl -fsSL https://raw.githubusercontent.com/G0kulakrishnan/pixsign/main/deploy.sh | bash"
 ```
+
+That single command pulls latest code, builds, copies to web root, and reloads Nginx.
+
+### Deployment flow (what deploy.sh does)
+1. `git clone` repo into `/tmp/pixsign_build`
+2. `npm install && npm run build`
+3. `cp -r dist/ /var/www/pixsign/`
+4. `sudo systemctl reload nginx`
+5. Cleanup `/tmp/pixsign_build`
 
 ### Nginx config (to be created on VPS)
 
