@@ -2,17 +2,17 @@ import { Star, Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Arjun Mehta',
-    role: 'Dealer Principal, Yamaha Showroom',
+    name: 'Arjun Kumar',
+    role: 'Bike Showroom Owner',
     location: 'Chennai',
-    avatar: 'AM',
+    avatar: 'AK',
     color: 'from-orange-500 to-red-600',
     rating: 5,
     text: 'Earlier we had to call our designer every time a new offer came. Now our 12 sales executives get the posters on their phones automatically with their own names on it. Customers trust us more because they see familiar names.',
   },
   {
     name: 'Priya Krishnamurthy',
-    role: 'Senior LIC Agent',
+    role: 'Insurance Agent',
     location: 'Coimbatore',
     avatar: 'PK',
     color: 'from-blue-500 to-indigo-600',
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: 'Vikram Nair',
-    role: 'Marketing Head, Apollo Hospitals Group',
+    role: 'Multi-Branch Clinic Owner',
     location: 'Bangalore',
     avatar: 'VN',
     color: 'from-green-500 to-teal-600',
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     name: 'Sunita Agarwal',
-    role: 'Channel Partner, Prestige Builders',
+    role: 'Real Estate Agent',
     location: 'Hyderabad',
     avatar: 'SA',
     color: 'from-purple-500 to-pink-600',
@@ -39,16 +39,16 @@ const testimonials = [
   },
   {
     name: 'Ramesh Chandrasekaran',
-    role: 'Regional Manager, Bajaj Finance',
-    location: 'Mumbai',
+    role: 'Finance Distributor',
+    location: 'Coimbatore',
     avatar: 'RC',
     color: 'from-amber-500 to-orange-600',
     rating: 5,
-    text: 'With 500 DSAs in our network, keeping everyone aligned on branding was impossible. PixSign solved that completely. We push one creative and 500 people share it with their own details within the hour.',
+    text: 'With 500 agents in our network, keeping everyone aligned on branding was impossible. PixSign solved that completely. We push one creative and 500 people share it with their own details within the hour.',
   },
   {
     name: 'Kavitha Rajan',
-    role: 'Franchise Owner, Fast Food Chain',
+    role: 'Food Franchise Owner',
     location: 'Madurai',
     avatar: 'KR',
     color: 'from-rose-500 to-pink-600',
