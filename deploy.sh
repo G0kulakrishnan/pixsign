@@ -7,7 +7,7 @@ set -e
 
 REPO="https://github.com/G0kulakrishnan/pixsign.git"
 APP_DIR="/var/www/pixsign"
-BUILD_DIR="$APP_DIR/build_tmp"
+BUILD_DIR="/tmp/pixsign_build"
 
 echo "=========================================="
 echo " PixSign Deploy"
