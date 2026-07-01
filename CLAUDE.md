@@ -113,28 +113,24 @@ src/
 - **User:** `pixsign-deploy`
 - **SSH:** `ssh pixsign-deploy@85.208.51.93`
 - **Web root:** `/var/www/pixsign/` (owned by pixsign-deploy)
-- **Sudoers:** can run `npm`, `git`, `systemctl reload nginx`, `rsync` without password
+- **Sudoers:** can run `systemctl reload nginx` without password
+- **Node:** NOT installed for deploy user — build happens locally
 
 ### How Claude should deploy (use this exact sequence)
 
 ```bash
-# 1. Commit & push all changes to GitHub first
-git add -A
-git commit -m "description of changes"
-git push
-
-# 2. SSH into VPS as deploy user and run deploy script
-ssh pixsign-deploy@85.208.51.93 "curl -fsSL https://raw.githubusercontent.com/G0kulakrishnan/pixsign/main/deploy.sh | bash"
+# From C:\Users\Gokul\Projects\pixsign on local machine:
+bash deploy.sh
 ```
 
-That single command pulls latest code, builds, copies to web root, and reloads Nginx.
+**What deploy.sh does:**
+1. `npm install` + `npm run build` locally
+2. `ssh pixsign-deploy@85.208.51.93 "rm -rf /var/www/pixsign/*"` — clear remote
+3. `scp -r dist/. pixsign-deploy@85.208.51.93:/var/www/pixsign/` — upload built files
+4. `ssh pixsign-deploy@85.208.51.93 "sudo systemctl reload nginx"` — reload
 
-### Deployment flow (what deploy.sh does)
-1. `git clone` repo into `/tmp/pixsign_build`
-2. `npm install && npm run build`
-3. `cp -r dist/ /var/www/pixsign/`
-4. `sudo systemctl reload nginx`
-5. Cleanup `/tmp/pixsign_build`
+**Important:** Build and upload are done locally (Node is NOT on the deploy user's PATH on VPS).
+SSH key: `~/.ssh/id_ed25519` must be authorized on the VPS (already set up).
 
 ### Nginx config (to be created on VPS)
 
