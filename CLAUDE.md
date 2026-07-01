@@ -118,8 +118,15 @@ src/
 
 ### How Claude should deploy (use this exact sequence)
 
+After making any code changes, Claude must:
+
 ```bash
-# From C:\Users\Gokul\Projects\pixsign on local machine:
+# Step 1 — commit and push to GitHub
+git add <changed files>
+git commit -m "description of changes"
+git push
+
+# Step 2 — build locally and deploy to VPS
 bash deploy.sh
 ```
 
@@ -127,7 +134,7 @@ bash deploy.sh
 1. `npm install` + `npm run build` locally
 2. `ssh pixsign-deploy@85.208.51.93 "rm -rf /var/www/pixsign/*"` — clear remote
 3. `scp -r dist/. pixsign-deploy@85.208.51.93:/var/www/pixsign/` — upload built files
-4. `ssh pixsign-deploy@85.208.51.93 "sudo systemctl reload nginx"` — reload
+4. `ssh pixsign-deploy@85.208.51.93 "sudo systemctl reload nginx"` — reload nginx
 
 **Important:** Build and upload are done locally (Node is NOT on the deploy user's PATH on VPS).
 SSH key: `~/.ssh/id_ed25519` must be authorized on the VPS (already set up).
