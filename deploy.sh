@@ -33,5 +33,5 @@ echo "[4/4] Reloading nginx..."
 ssh "$VPS" "sudo systemctl reload nginx"
 
 echo ""
-echo "✅ Deploy complete → https://www.pixsign.in"
+echo "✅ Deploy complete → https://pixsignpro.in"
 echo ""

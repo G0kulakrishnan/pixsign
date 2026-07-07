@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 **PixSign** is a React + Vite + Tailwind CSS landing page for a SaaS marketing distribution platform.
-- Website: [pixsign.in](https://pixsign.in)
+- Website: [pixsignpro.in](https://pixsignpro.in)
 - Owner: Tech To Grow ([techtogrow.in](https://techtogrow.in))
 - Contact: +91 96590 01122, +91 98403 20932
 
@@ -99,7 +99,7 @@ src/
 - All meta tags, Open Graph, Twitter Card, and JSON-LD structured data live in `index.html`.
 - JSON-LD includes: `Organization`, `SoftwareApplication`, and `FAQPage` schemas.
 - `SEOContent.jsx` targets these keywords (do not remove): `marketing automation software`, `dealer marketing software`, `distributor marketing software`, `whatsapp marketing creative app`, `franchise marketing software`, `sales enablement platform`, `automatic image branding`, `marketing asset management`, `marketing automation India`.
-- Canonical URL: `https://pixsign.in/`
+- Canonical URL: `https://pixsignpro.in/`
 
 ---
 
@@ -146,7 +146,7 @@ Site should be served by Nginx as a static site — **not** via PM2 (it's a stat
 ```nginx
 server {
     listen 80;
-    server_name pixsign.in www.pixsign.in;
+    server_name pixsignpro.in www.pixsignpro.in;
     root /var/www/pixsign;
     index index.html;
 
@@ -168,7 +168,7 @@ server {
 
 After SSL (Certbot):
 ```bash
-certbot --nginx -d pixsign.in -d www.pixsign.in
+certbot --nginx -d pixsignpro.in -d www.pixsignpro.in
 ```
 
 ### Other projects on the VPS (do not touch)
