@@ -55,6 +55,14 @@ export default function Navbar() {
               +91 96590 01122
             </a>
             <a
+              href="https://portal.pixsignpro.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'}`}
+            >
+              Login
+            </a>
+            <a
               href="#demo"
               className="btn-primary !px-6 !py-3 !text-sm animate-cta-pulse"
             >
@@ -87,7 +95,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-3 border-t border-gray-100">
+            <div className="pt-3 border-t border-gray-100 space-y-2">
+              <a
+                href="https://portal.pixsignpro.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors text-center"
+              >
+                Login
+              </a>
               <a href="#demo" className="btn-primary w-full justify-center">
                 Book Free Demo
               </a>

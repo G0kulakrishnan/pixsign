@@ -21,9 +21,9 @@ const links = {
   ],
   Support: [
     { label: 'FAQ', href: '#faq' },
+    { label: 'Login Portal', href: 'https://portal.pixsignpro.in', external: true },
     { label: 'Privacy Policy', href: '#' },
     { label: 'Terms of Service', href: '#' },
-    { label: 'Refund Policy', href: '#' },
   ],
 }
 
@@ -58,11 +58,11 @@ export default function Footer() {
               >
                 <MessageCircle className="w-4 h-4 text-green-400" /> WhatsApp Us
               </a>
-              <a href="mailto:hello@pixsign.in" className="flex items-center gap-2 text-sm hover:text-white transition-colors">
-                <Mail className="w-4 h-4 text-blue-400" /> hello@pixsign.in
+              <a href="mailto:hello@pixsignpro.in" className="flex items-center gap-2 text-sm hover:text-white transition-colors">
+                <Mail className="w-4 h-4 text-blue-400" /> hello@pixsignpro.in
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.pixsign4.world"
+                href="https://play.google.com/store/apps/details?id=com.t2g.pixsignpro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm hover:text-white transition-colors"

@@ -68,7 +68,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
               <a
-                href="https://play.google.com/store/apps/details?id=com.pixsign4.world"
+                href="https://play.google.com/store/apps/details?id=com.t2g.pixsignpro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary !py-3 !px-6 text-sm"
@@ -125,7 +125,7 @@ function AdminDashboardMockup() {
           </div>
           <div className="flex-1 mx-3 bg-white/10 rounded-full px-3 py-1 flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-400" />
-            <span className="text-white/50 text-[10px]">pixsign.in/pro/manage-images.php</span>
+            <span className="text-white/50 text-[10px]">pixsignpro.in/pro/manage-images.php</span>
           </div>
         </div>
 

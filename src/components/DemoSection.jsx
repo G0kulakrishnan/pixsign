@@ -60,7 +60,7 @@ export default function DemoSection() {
           <div className="border-t border-white/20 pt-8">
             <p className="text-white/60 text-sm mb-4">Already have an account? Download the app</p>
             <a
-              href="https://play.google.com/store/apps/details?id=com.pixsign4.world"
+              href="https://play.google.com/store/apps/details?id=com.t2g.pixsignpro"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl hover:bg-white/20 transition-all duration-300 hover:-translate-y-0.5"
