@@ -1,4 +1,4 @@
-import { Zap, Phone, MessageCircle, Mail, ExternalLink, Smartphone } from 'lucide-react'
+import { Phone, MessageCircle, Mail, ExternalLink, Smartphone } from 'lucide-react'
 
 const links = {
   Product: [
@@ -34,10 +34,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand column */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo.png" alt="PixSign Pro" className="h-14 w-14 rounded-xl object-contain" />
               <span className="text-xl font-bold text-white">Pix<span className="text-blue-400">Sign</span></span>
             </div>
             <p className="text-sm leading-relaxed mb-6">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Zap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
@@ -24,13 +24,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
-            <span className={`text-xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-              Pix<span className="text-blue-400">Sign</span>
-            </span>
+          <a href="#" className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="PixSign Pro"
+              className="h-12 w-12 lg:h-14 lg:w-14 rounded-xl object-contain group-hover:scale-105 transition-transform"
+            />
           </a>
 
           {/* Desktop nav */}
