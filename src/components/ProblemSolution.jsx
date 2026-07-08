@@ -198,13 +198,13 @@ export default function ProblemSolution() {
             </div>
 
             {/* PixSign way */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-2xl p-8 text-white shadow-xl">
+            <div className="bg-gradient-to-br from-[#0e7490] to-[#0f1830] rounded-2xl p-8 text-white shadow-xl">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-[#B4E82B]/20 rounded-xl flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-[#B4E82B]" />
                 </div>
                 <div>
-                  <div className="text-xs text-blue-200 font-bold uppercase tracking-wider">With PixSign</div>
+                  <div className="text-xs text-cyan-200 font-bold uppercase tracking-wider">With PixSign</div>
                   <div className="font-bold text-white text-lg">Dealer Network Marketing</div>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function ProblemSolution() {
           <div className="bg-gray-950 rounded-2xl p-6 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <div className="text-blue-400 text-sm font-bold uppercase tracking-wider mb-3">The Math is Simple</div>
+                <div className="text-[#B4E82B] text-sm font-bold uppercase tracking-wider mb-3">The Math is Simple</div>
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Your Dealer Network is a <span className="text-yellow-400">Free Media Channel</span>
                 </h3>
@@ -256,7 +256,7 @@ export default function ProblemSolution() {
                   <div
                     key={row.label}
                     className={`flex items-center justify-between px-5 py-3 rounded-xl ${
-                      row.highlight ? 'bg-blue-600 text-white' : 'bg-white/5 text-gray-300'
+                      row.highlight ? 'bg-[#0e7490] text-white' : 'bg-white/5 text-gray-300'
                     }`}
                   >
                     <span className="text-sm">{row.label}</span>
@@ -301,9 +301,9 @@ export default function ProblemSolution() {
 
         {/* Analytics advantage — the game changer */}
         <div data-aos="fade-up">
-          <div className="bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 rounded-2xl p-6 lg:p-14 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[#0a1222] via-[#0f1830] to-[#0e2a33] rounded-2xl p-6 lg:p-14 relative overflow-hidden">
             {/* BG glow */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#B4E82B]/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative grid lg:grid-cols-2 gap-8 items-center">
               <div>
@@ -322,7 +322,7 @@ export default function ProblemSolution() {
                     { icon: <CheckCircle2 className="w-5 h-5 text-green-400" />, text: 'See every dealer who downloaded but didn\'t share' },
                     { icon: <Eye className="w-5 h-5 text-yellow-400" />, text: 'See the "Non Opened Users" list — your untapped markets' },
                     { icon: <MapPin className="w-5 h-5 text-red-400" />, text: 'Filter by city to find geographic gaps in your campaign' },
-                    { icon: <Share2 className="w-5 h-5 text-blue-400" />, text: 'Download CSV to build a follow-up calling list instantly' },
+                    { icon: <Share2 className="w-5 h-5 text-[#B4E82B]" />, text: 'Download CSV to build a follow-up calling list instantly' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 text-white/85 text-sm">
                       {item.icon}
@@ -374,7 +374,7 @@ export default function ProblemSolution() {
                       </div>
                       <div className="flex gap-2 flex-shrink-0 text-[10px]">
                         <span className="bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded">↑{u.shared}</span>
-                        <span className="bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">↓{u.dl}</span>
+                        <span className="bg-cyan-500/20 text-cyan-300 px-1.5 py-0.5 rounded">↓{u.dl}</span>
                       </div>
                     </div>
                   ))}

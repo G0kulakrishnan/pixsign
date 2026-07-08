@@ -38,7 +38,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-500 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}
+                className={`text-sm font-medium transition-colors hover:text-[#65a30d] ${scrolled ? 'text-gray-600' : 'text-white/80'}`}
               >
                 {link.label}
               </a>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+919659001122"
-              className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'}`}
+              className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-[#65a30d]' : 'text-white/80 hover:text-white'}`}
             >
               +91 96590 01122
             </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-700 font-medium hover:bg-[#f2fbdf] hover:text-[#4d7c0f] rounded-lg transition-colors"
               >
                 {link.label}
               </a>

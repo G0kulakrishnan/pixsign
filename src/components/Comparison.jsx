@@ -64,13 +64,13 @@ export default function Comparison() {
           </div>
 
           {/* With PixSign */}
-          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-2xl p-8 shadow-xl">
+          <div className="bg-gradient-to-br from-[#0e7490] to-[#0f1830] rounded-2xl p-8 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Check className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-xl bg-[#B4E82B]/20 flex items-center justify-center">
+                <Check className="w-5 h-5 text-[#B4E82B]" />
               </div>
               <div>
-                <div className="text-xs text-blue-200 font-semibold uppercase tracking-wider">With PixSign</div>
+                <div className="text-xs text-cyan-200 font-semibold uppercase tracking-wider">With PixSign</div>
                 <div className="text-lg font-bold text-white">The Smart Way</div>
               </div>
             </div>

@@ -27,8 +27,8 @@ export default function Hero() {
     <section className="relative min-h-screen hero-gradient overflow-hidden flex items-center">
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl animate-float2" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#B4E82B]/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#29C7D6]/20 rounded-full blur-3xl animate-float2" />
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
           backgroundSize: '50px 50px'
@@ -47,7 +47,7 @@ export default function Hero() {
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
               One Marketing Creative.{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#B4E82B] to-[#29C7D6] bg-clip-text text-transparent">
                 Unlimited Personalized
               </span>{' '}
               Promotions.

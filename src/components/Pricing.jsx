@@ -91,7 +91,7 @@ export default function Pricing() {
                 key={plan.name}
                 className={`relative rounded-2xl p-8 border card-hover ${
                   plan.highlight
-                    ? 'bg-gradient-to-br from-blue-600 to-purple-700 border-transparent shadow-2xl ring-2 ring-blue-400/30'
+                    ? 'bg-gradient-to-br from-[#0e7490] to-[#0f1830] border-transparent shadow-2xl ring-2 ring-[#B4E82B]/40'
                     : 'bg-white border-gray-100 shadow-sm'
                 }`}
                 data-aos="fade-up"
@@ -109,7 +109,7 @@ export default function Pricing() {
                   <Icon className="w-6 h-6 text-white" />
                 </div>
 
-                <div className={`text-sm font-semibold mb-1 ${plan.highlight ? 'text-blue-200' : 'text-blue-600'}`}>
+                <div className={`text-sm font-semibold mb-1 ${plan.highlight ? 'text-[#B4E82B]' : 'text-[#4d7c0f]'}`}>
                   {plan.tagline}
                 </div>
                 <div className={`text-2xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>
@@ -121,11 +121,11 @@ export default function Pricing() {
                   <span className={`text-4xl font-extrabold ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>
                     {plan.priceVal}
                   </span>
-                  <span className={`text-sm pb-1 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
+                  <span className={`text-sm pb-1 ${plan.highlight ? 'text-cyan-200' : 'text-gray-400'}`}>
                     {plan.priceSub}
                   </span>
                 </div>
-                <div className={`text-xs mb-6 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
+                <div className={`text-xs mb-6 ${plan.highlight ? 'text-cyan-200' : 'text-gray-400'}`}>
                   {plan.ctaNote}
                 </div>
 
@@ -137,7 +137,7 @@ export default function Pricing() {
                         <span>
                           {f.text}
                           {f.note && (
-                            <span className={`block text-xs mt-0.5 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
+                            <span className={`block text-xs mt-0.5 ${plan.highlight ? 'text-cyan-200' : 'text-gray-400'}`}>
                               {f.note}
                             </span>
                           )}
@@ -151,8 +151,8 @@ export default function Pricing() {
                   href="#demo"
                   className={`block text-center font-semibold py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 ${
                     plan.highlight
-                      ? 'bg-white text-blue-700 hover:bg-gray-50 shadow-lg'
-                      : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-blue-500/25'
+                      ? 'bg-[#B4E82B] text-[#0b1220] hover:bg-[#c4f23f] shadow-lg'
+                      : 'bg-[#B4E82B] text-[#0b1220] hover:bg-[#c4f23f] shadow-md'
                   }`}
                 >
                   {plan.cta}
