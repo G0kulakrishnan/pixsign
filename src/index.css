@@ -58,10 +58,10 @@
     border: 1px solid #d9f2a3;
   }
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight;
   }
   .section-subtitle {
-    @apply text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed;
+    @apply text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed;
   }
 }
 

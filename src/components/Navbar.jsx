@@ -22,13 +22,13 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <a href="#" className="flex items-center group">
             <img
               src="/logo.png"
               alt="PixSign Pro"
-              className="h-12 w-12 lg:h-14 lg:w-14 rounded-xl object-contain group-hover:scale-105 transition-transform"
+              className="h-16 w-16 lg:h-20 lg:w-20 rounded-xl object-contain group-hover:scale-105 transition-transform"
             />
           </a>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#65a30d] ${scrolled ? 'text-gray-600' : 'text-white/80'}`}
+                className={`text-base font-medium transition-colors hover:text-[#65a30d] ${scrolled ? 'text-gray-600' : 'text-white/80'}`}
               >
                 {link.label}
               </a>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+919659001122"
-              className={`text-sm font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-[#65a30d]' : 'text-white/80 hover:text-white'}`}
+              className={`text-base font-medium transition-colors ${scrolled ? 'text-gray-600 hover:text-[#65a30d]' : 'text-white/80 hover:text-white'}`}
             >
               +91 96590 01122
             </a>
@@ -57,13 +57,13 @@ export default function Navbar() {
               href="https://portal.pixsignpro.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary !px-6 !py-3 !text-sm"
+              className="btn-primary !px-6 !py-3 !text-base"
             >
               Login
             </a>
             <a
               href="#demo"
-              className="btn-primary !px-6 !py-3 !text-sm animate-cta-pulse"
+              className="btn-primary !px-6 !py-3 !text-base animate-cta-pulse"
             >
               Book Free Demo
             </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-gray-700 font-medium hover:bg-[#f2fbdf] hover:text-[#4d7c0f] rounded-lg transition-colors"
+                className="block px-4 py-3 text-lg text-gray-700 font-medium hover:bg-[#f2fbdf] hover:text-[#4d7c0f] rounded-lg transition-colors"
               >
                 {link.label}
               </a>

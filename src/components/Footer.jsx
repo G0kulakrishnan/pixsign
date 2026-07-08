@@ -35,8 +35,8 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="PixSign Pro" className="h-14 w-14 rounded-xl object-contain" />
-              <span className="text-xl font-bold text-white">Pix<span className="text-[#B4E82B]">Sign</span></span>
+              <img src="/logo.png" alt="PixSign Pro" className="h-16 w-16 rounded-xl object-contain" />
+              <span className="text-2xl font-bold text-white">Pix<span className="text-[#B4E82B]">Sign</span></span>
             </div>
             <p className="text-sm leading-relaxed mb-6">
               India's leading marketing distribution platform. Upload once. Every dealer, agent, and salesperson gets their own branded creative automatically.

@@ -40,12 +40,12 @@ export default function Hero() {
 
           {/* Left – copy */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/20 mb-4" data-aos="fade-down">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium px-4 py-2 rounded-full border border-white/20 mb-5" data-aos="fade-down">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               Trusted by 100+ Businesses Across India
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5" data-aos="fade-up" data-aos-delay="100">
               One Marketing Creative.{' '}
               <span className="bg-gradient-to-r from-[#B4E82B] to-[#29C7D6] bg-clip-text text-transparent">
                 Unlimited Personalized
@@ -53,14 +53,14 @@ export default function Hero() {
               Promotions.
             </h1>
 
-            <p className="text-base text-white/75 leading-relaxed mb-5 max-w-xl" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-lg text-white/75 leading-relaxed mb-5 max-w-xl" data-aos="fade-up" data-aos-delay="200">
               Upload your creatives once. Every dealer, distributor, franchise and sales exec instantly gets a branded version with their name, phone, agency and location <strong className="text-white">automatically added</strong>.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-5" data-aos="fade-up" data-aos-delay="250">
               {badges.map(b => (
-                <span key={b} className="flex items-center gap-1.5 text-sm text-white/80">
-                  <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                <span key={b} className="flex items-center gap-1.5 text-base text-white/80">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   {b}
                 </span>
               ))}
@@ -71,13 +71,13 @@ export default function Hero() {
                 href="https://play.google.com/store/apps/details?id=com.t2g.pixsignpro"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary !py-3 !px-6 text-sm"
+                className="btn-primary !py-3.5 !px-7 text-base"
               >
-                <Smartphone className="w-4 h-4" />
+                <Smartphone className="w-5 h-5" />
                 Download App
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="#demo" className="btn-secondary !py-3 !px-6 text-sm">
+              <a href="#demo" className="btn-secondary !py-3.5 !px-7 text-base">
                 Book Free Demo
               </a>
             </div>
@@ -86,8 +86,8 @@ export default function Hero() {
             <div className="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-white/10" data-aos="fade-up" data-aos-delay="400">
               {stats.map(s => (
                 <div key={s.label} className="text-center">
-                  <div className="text-2xl lg:text-3xl font-extrabold text-white">{s.value}</div>
-                  <div className="text-[11px] text-white/55 mt-0.5">{s.label}</div>
+                  <div className="text-3xl lg:text-4xl font-extrabold text-white">{s.value}</div>
+                  <div className="text-xs text-white/55 mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
