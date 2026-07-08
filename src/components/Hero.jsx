@@ -24,7 +24,7 @@ const mockCards = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen hero-gradient overflow-hidden flex items-center">
+    <section className="relative min-h-screen hero-gradient overflow-hidden flex items-start">
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#B4E82B]/20 rounded-full blur-3xl animate-float" />
@@ -35,12 +35,12 @@ export default function Hero() {
         }} />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 lg:pt-36 pb-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* Left – copy */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium px-4 py-2 rounded-full border border-white/20 mb-5" data-aos="fade-down">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium px-4 py-2 rounded-full border border-white/20 mb-5" data-aos="fade-up">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               Trusted by 100+ Businesses Across India
             </div>
